@@ -59,10 +59,14 @@ export default function App() {
 }
 ```
 **클릭 전**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/6f992a4f-4685-4dcc-b304-79e282920075/image.png)
 <br><br><br><br>
 
 **클릭 후**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/9eb56a81-4722-4f43-b315-df687f1f9023/image.png)
 
 - state가 변하였으므로 컴포넌트가 리랜더링되기 때문에 화면에 1이 표시된다.
@@ -96,10 +100,14 @@ export default function App() {
 
 ```
 **클릭 전**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/badb23c0-91b6-4ed5-a312-b1c1dc2424ec/image.png)
 <br><br><br><br>
 
 **클릭 후**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/8a9f0739-3b99-494b-93a2-7d0ada1b2313/image.png)
 
 - 컴포넌트가 리랜더링되지 않으므로 화면의 숫자는 그대로 0이다.
@@ -137,10 +145,14 @@ export default function App() {
 
 ```
 **클릭 전**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/238178bc-039f-452b-aa4e-4d1e76d44e61/image.png)
 <br><br><br><br>
 
 **클릭 후**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/b352a502-c31a-42c4-9e1f-9dc223ddcc74/image.png)
 
 - state가 변하였으므로 컴포넌트가 리랜더링이되므로 화면에 refCount.current값인 1이 표시된다.
@@ -179,10 +191,14 @@ export default function App() {
 ```
 
 **클릭 전**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/238178bc-039f-452b-aa4e-4d1e76d44e61/image.png)
 <br><br><br><br>
 
 **클릭 후**
+
+
 ![](https://velog.velcdn.com/images/junsgk/post/f8282240-619a-4cea-80ea-f0ee7a393d1c/image.png)
 
 - state가 변하지 않았으므로 컴포넌트의 리랜더링이 발생하지 않으므로 화면에 0이 그대로 표시된다.
