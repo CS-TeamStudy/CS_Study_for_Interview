@@ -285,8 +285,9 @@ export default function App() {
       <div>
         <label htmlFor="id">아이디 : </label>
         <input 
-		  id="id" 
-	      ref={idRef} />
+	  id="id"
+	  ref={idRef}
+	/>
       </div>
       <div>
         <label htmlFor="password">비밀번호 : </label>
