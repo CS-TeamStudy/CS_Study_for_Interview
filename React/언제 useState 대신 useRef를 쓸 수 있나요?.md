@@ -25,7 +25,8 @@ export default function App() {
 
 ```
 
-> 리랜더링이 필요한 값은 useState, state값이 변하면 컴포넌트가 리랜더링된다. 
+> 리랜더링이 필요한 값은 useState, state값이 변하면 컴포넌트가 리랜더링된다.
+> 
 > 리랜더링이 필요없는 값은 useRef, ref값이 변해도 컴포넌트가 리랜더링되지 않는다.
 
 뭔소리인지 잘 와닿지 않으므로 퀴즈들과 예시를 보면서 useState와 useRef에 차이점에 대해서 알아보자!
