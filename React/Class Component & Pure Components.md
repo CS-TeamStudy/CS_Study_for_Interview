@@ -74,6 +74,7 @@ class ApiErrorBoundary {
 ```
 https://fe-developers.kakaoent.com/2022/221110-error-boundary/
 
+https://ko.legacy.reactjs.org/docs/error-boundaries.html
 <br />
 <br />
 
