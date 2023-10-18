@@ -2,7 +2,7 @@
 
 ## document load event와 DOMContentLoaded event
 
-### DOMContentLoaded event?
+### DOMContentLoaded event? 
 
 - DOM tree 분석이 완료된 후 event 발생
 - 즉, DOM tree 가 다 만들어진 후에 돔에 접근이 가능하기 때문에, 돔이 생성되기전 돔을 조작하는 자바스크립트 코드가 실행되어 원치 않는 결과를 내는것을 막을 수 있음
