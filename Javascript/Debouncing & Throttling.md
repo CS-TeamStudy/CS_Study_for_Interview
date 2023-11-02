@@ -17,7 +17,7 @@
 이러한 경우에 디바운싱을 적용하면 사용자의 입력이 끝나고 일정 시간이 지난 후에 검색 요청이 1번만 보내지므로 성능을 향상시킬 수 있다.
 
 ```js
-const inputElement = document.querySelector('#인풋요소');
+const inputElement = document.querySelector('#인풋요소선택');
 const DELAY = 500;
 const handleChange = () => {
   console.log('요청!');
