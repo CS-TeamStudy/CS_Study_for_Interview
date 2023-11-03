@@ -15,6 +15,8 @@
 - HTTP와 HTTPS
 - DNS Round Robin
 - 웹 통신의 큰 흐름
+- Polling, SSE, Web Socket
+- Request Headers
 
 ## 💾 [OS (운영체제)](https://github.com/CS-TeamStudy/CS_Study_for_Interview/tree/master/OS)
 - 프로세스와 스레드
@@ -47,22 +49,45 @@
 - AJAX
 - AMD, CommonJS
 - Anonymous Function
+- Async & Await
 - Async & Sync
 - CSS Methodology
 - Call & Apply
+- Class
 - Closer
 - DOMContentLoaded, load
+- Debouncing & Throttling
 - Event Delegation
+- Event Loop
 - Extends JS Objects
 - Function Prototype bind
 - Global Scope
 - Host Object, Native Object
 - IIFE
 - Iteration
-- Jsonp
-- Mutable Object, Immutable Object
-- Null, Undefind, undeclared
+- JavaScript & TypeScript
 - Promise
 - Prototype
 - This
+- for, for ...of, for ...in, forEach
+- Jsonp
+- Mutable Object, Immutable Object
+- Null, Undefind, undeclared
+- Web Storage & Cookie
+- Test Code
 
+## ✨ [React (리액트)](https://github.com/CS-TeamStudy/CS_Study_for_Interview/tree/master/React)
+- Class Component & Pure Components
+- Class vs Function Component
+- React Hooks
+- Hydration
+- Props & State
+- Suspense
+- Custom Hooks
+- Function Components & Functional Components
+- Next.js
+- useLayoutEffect
+- Life Cycle
+- 리액트에서 스테이트의 불변성을 유지해야하는 이유
+- 성능 개선하는 법
+- useState 대신 useRef를 쓸 수 있는 경우
