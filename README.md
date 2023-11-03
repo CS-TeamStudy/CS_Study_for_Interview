@@ -76,7 +76,7 @@
 - Web Storage & Cookie
 - Test Code
 
-## ✨ [React (리액트)](https://github.com/CS-TeamStudy/CS_Study_for_Interview/tree/master/React)
+## 🧿 [React (리액트)](https://github.com/CS-TeamStudy/CS_Study_for_Interview/tree/master/React)
 - Class Component & Pure Components
 - Class vs Function Component
 - React Hooks
