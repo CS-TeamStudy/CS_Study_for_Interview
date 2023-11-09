@@ -1,6 +1,6 @@
 ## 202. How do you create an object with prototype 
 
-### Object.create() 메소드 사용하여 prototype으로 부터 직접 객체생성을 할 수 있다.
+### Object.create() 메소드 사용하여 prototype으로 부터 직접 객체생성을 할 수 있다. 
 
 ```js
 const catPrototype = {
