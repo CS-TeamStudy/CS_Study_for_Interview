@@ -54,7 +54,7 @@
 - CSS Methodology
 - Call & Apply
 - Class
-- Closer
+- Closure
 - DOMContentLoaded, load
 - Debouncing & Throttling
 - Event Delegation
