@@ -1,5 +1,5 @@
 ## 303. What is the output of below for loops
-  
+
 ```js
 for (var i = 0; i < 4; i++) {
   // global scope
