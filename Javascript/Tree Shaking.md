@@ -103,7 +103,7 @@
 
 ---
 
-참고
-https://helloinyong.tistory.com/305#google_vignette
-https://so-so.dev/web/tree-shaking-module-system/#esm%EC%9D%98-%ED%8A%B9%EC%A7%95%EB%93%A4
-https://webpack.js.org/guides/tree-shaking/
+참고  
+https://helloinyong.tistory.com/305#google_vignette  
+https://so-so.dev/web/tree-shaking-module-system/#esm%EC%9D%98-%ED%8A%B9%EC%A7%95%EB%93%A4  
+https://webpack.js.org/guides/tree-shaking/  
