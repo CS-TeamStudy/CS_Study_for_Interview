@@ -384,7 +384,7 @@ export default function Home() {
 
   ![2023-12-04_22-57-53](https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/9b9dad0e-59dc-4dd4-b67c-36329e7d9e91)
 
-## fill 속성?
+## fill 속성
 
 - 원격이미지는 사이즈는 물론 가로세로 비율도 모르기 때문에 만약 일정한 크기의 이미지를 보여주고 싶다면 다음과 같은 문제가 발생할 수 있다.
 
