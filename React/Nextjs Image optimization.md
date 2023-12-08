@@ -341,6 +341,7 @@ export default function Home() {
 ```
 
 - 예상 되는 에러는??
+
   <img width="728" alt="image" src="https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/1b709b59-4593-4d39-939a-f55ee9b67f98">
 
   - 원격 이미지의 경우 `blurDataURL`가 자동으로 생성되지 않는다.
