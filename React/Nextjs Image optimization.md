@@ -5,7 +5,7 @@
 - 그러나 공식 문서상 설명이 애매한 부분이 다소있어 이 기회에 제대로 정리 하고자 한다.
 
 > 들어가기에 앞서 Next.js 이미지 컴포넌트에 대해 얼마나 알고 있는지 알아보기위해 warm-up quiz를 준비했습니다.
-
+<br /><br /><br />
 ## Warm-up Quiz
 
 1. Image 컴포넌트는 1000개 까지만 무료다.
@@ -16,7 +16,7 @@
 1. size속성은 fill을 적용했을 때만 사용해야 한다.
 
 정답 : o, x, o, x, o, x
-
+<br /><br /><br />
 ## Image 컴포넌트를 사용해야 하는 이유
 
 ### 사용할 이미지 및 환경
@@ -95,7 +95,7 @@ export default function ImagePage() {
 - Image 컴포넌트 + size 속성 사용시 html img태그 사용시보다 이미지크기는 34.12배 감소
 - 로딩 시간 11.8배 감소
 - 무조건 사용하자 !!??
-
+<br /><br /><br />
 ## Pricing
 
 https://vercel.com/docs/image-optimization/limits-and-pricing
@@ -161,7 +161,7 @@ https://vercel.com/docs/image-optimization/limits-and-pricing
     return <Image src={cat} alt="cat" unoptimized />; // source images  카운트가 안까인다.
   }
   ```
-
+<br /><br /><br />
 ## 정적 로컬 이미지 최적화
 
 <img width="800" alt="image" src="https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/3acd41dd-429b-4c10-b6b4-eb6c2cb795d8">
@@ -272,7 +272,7 @@ export default function Home() {
   <img width="800" alt="image" src="https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/ee239086-c24a-4592-aed4-a01e3bfa4f75">
 
 - svg + sml 형식의 이미지가 `blurDataURL` 이미지이며 width가 8, 이미지 크기가 1.1kB인 매우 저해상도의 이미지다.
-
+<br /><br /><br />
 ## 원격 외부 이미지 최적화
 
 - 원격 이미지를 가져올 경우 루트 디렉토리에 있는 `next.config.js`파일에서 설정이 필요함
@@ -389,7 +389,7 @@ export default function Home() {
   ```
 
   ![2023-12-04_22-57-53](https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/9b9dad0e-59dc-4dd4-b67c-36329e7d9e91)
-
+<br /><br /><br />
 ## fill 속성
 
 - 다양한 출처의 원격 외부 이미지는 width와 height가 일정하지 않기 때문에 다음과 같은 문제가 발생할 수 있다.
@@ -491,7 +491,7 @@ export default async function Home() {
 - 추가적으로 `fill` 속성은 정적 로컬이미지에서도 사용가능하다.
 - `fill` 속성을 사용하면 `width`와 `height`가 없으므로 CLS가 발생하지 않을까?
   - 사이즈를 정해주는 부모가 있기 때문에 CLS가 발생하지 않음
-
+<br /><br /><br />
 ## size 속성
 
 - `srcset`과 더불어 반응형 이미지 최적화 구현을 위해 꼭 필요한 속성이다.
@@ -591,7 +591,7 @@ export default async function Home() {
 
   ![ezgif com-video-to-gif](https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/2d5b58a7-4e53-439f-bd3d-d779ebac37fe)
   <img width="996" alt="image" src="https://github.com/CS-TeamStudy/CS_Study_for_Interview/assets/87072568/4ac93e8d-5d33-4f3e-87a6-0fea610c16ce">
-
+<br /><br /><br />
 ## priority 속성
 
 - img태그의 기본 속성인 fetchPriority를 설정함
@@ -637,5 +637,5 @@ export default async function Home() {
 
 - next에서 설치를 권장하므로 설치해준다.
 
-
+<br /><br /><br />
 # 끝
