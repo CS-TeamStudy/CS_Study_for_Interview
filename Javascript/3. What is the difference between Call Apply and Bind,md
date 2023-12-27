@@ -1,0 +1,181 @@
+## problem
+
+> `call`, `apply`, `bind` 모두 특정 함수를 다른 객체의 메소드처럼 사용할 수 있게 해준다.
+
+뭔소리인지 잘 모르겠으니 바로 예시로 go!
+
+말하는 고양이 호우는 자신의 이름을 말할 수 있다.
+
+```js
+const howoo = {
+  name: '호우',
+  salute() {
+    console.log(`나는 ${this.name}야`);
+  },
+};
+
+howoo.salute(); // 나는 호우야
+```
+
+강아지 베리도 `salute` 메소드를 사용해서 말하고 싶음
+
+```js
+const berry = {
+  name: '베리',
+  salute() {
+    console.log(`나는 ${this.name}야`);
+  },
+};
+
+berry.salute(); // 나는 베리야
+```
+
+망고, 딸기, 초코도 `salute` 메소드를 배우고 싶은데 이렇게 객체 내부의 메소드를 생성하게 되면 같은 로직의 반복이 발생함.
+
+## call
+
+외부에 `salute` 함수를 정의하고 필요시에 불러서(call) 사용하는 것이 합리적
+
+```js
+const howoo = {
+  name: '호우',
+};
+
+const berry = {
+  name: '베리',
+};
+
+function salute() {
+  console.log(`나는 ${this.name}야`);
+}
+
+salute();
+// 나는 undefined야
+
+howoo.salute();
+// TypeError: howoo.salute is not a function
+```
+
+```js
+salute.call(howoo); // 나는 호우야
+salute.call(berry); // 나는 베리야
+```
+
+## apply... call과의 차이점
+
+`apply`는 `call`과 매우 유사
+
+```js
+salute.apply(howoo); // 나는 호우야
+salute.apply(berry); // 나는 베리야
+```
+
+`call`과의 차이점은 함수의 argument를 다루는 방식이 다름
+
+```js
+const howoo = {
+  name: '호우',
+};
+
+const berry = {
+  name: '베리',
+};
+
+function upgradeSalute(message, species) {
+  console.log(`${message}!, 나는 ${species} ${this.name}야`);
+}
+```
+
+`call`: 인자를 콤마로 전달
+
+```js
+upgradeSalute.call(howoo, '하이루', '고양이');
+// 하이루!, 나는 고양이 호우야
+upgradeSalute.call(berry, '방가방가', '강아지');
+// 방가방가!, 나는 강아지 베리야
+```
+
+`apply`: 인자를 배열로 전달함
+
+```js
+upgradeSalute.apply(howoo, ['하이루', '고양이']);
+// 하이루!, 나는 고양이 호우야
+upgradeSalute.apply(berry, ['방가방가', '강아지']);
+// 방가방가!, 나는 강아지 베리야
+```
+
+다음과 같이 인자가 배열로 전달되는 경우 다음과 같이 사용할 수 있다.
+
+```js
+const arg = ['굿모닝', '고양이'];
+
+upgradeSalute.apply(howoo, arg);
+// 굿모닝!, 나는 고양이 호우야
+upgradeSalute.call(howoo, ...arg);
+// 굿모닝!, 나는 고양이 호우야
+```
+
+## bind
+
+`upgradeSalute.call(howoo, '하이루', '고양이')` 를 곳곳에서 사용하고 싶음
+
+```js
+upgradeSalute.call(howoo, '하이루', '고양이');
+// 하이루!, 나는 고양이 호우야
+...
+upgradeSalute.call(howoo, '하이루', '고양이');
+// 하이루!, 나는 고양이 호우야
+...
+upgradeSalute.call(howoo, '하이루', '고양이');
+// 하이루!, 나는 고양이 호우야
+...
+upgradeSalute.call(howoo, '하이루', '고양이');
+// 하이루!, 나는 고양이 호우야
+```
+
+변수에 담아서 사용하고 싶다는 생각이 들기 시작
+
+```js
+const howooSalute = upgradeSalute.call(howoo, '하이루', '고양이');
+howooSalute(); // TypeError: howooSalute is not a function
+...
+howooSalute();
+...
+howooSalute();
+...
+howooSalute();
+
+console.log(howooSalute) // undefined
+```
+
+call과 apply는 실행문이기 때문에 변수에 담기지 않고 한번 실행하고 끝임
+
+변수에 담아서 사용하는 것을 가능케 하는 것이 `bind`
+
+```js
+const howooSalute = upgradeSalute.bind(howoo, '하이루', '고양이');
+howooSalute(); // 하이루!, 나는 고양이 호우야
+...
+howooSalute(); // 하이루!, 나는 고양이 호우야
+...
+howooSalute(); // 하이루!, 나는 고양이 호우야
+...
+howooSalute(); // 하이루!, 나는 고양이 호우야
+```
+
+`console.log(howooSalute)`를 해보면 upgradeSalute함수라고 나오지만 `this`에 `howoo`가 박힌채로 호출되는 것을 알 수 있음.
+
+<img width="348" alt="image" src="https://github.com/Fastcampus-Final-Team3/jober-frontend/assets/87072568/7e674aca-2f68-41d4-9902-ea2ff9cad646">
+
+## bind의 또다른 특징
+
+`bind`로 생성한 함수 역시 함수이기 때문에 다른 객체에서 불러서(call)해서 사용할 수 있을까?
+
+```js
+const howooSalute = upgradeSalute.bind(howoo, '하이루', '고양이');
+
+howooSalute.call(berry, '베리굿', '강아지');
+// 하이루!, 나는 고양이 호우야
+```
+
+`bind`로 한번 묶인 함수는 다른 객체에서 불러서 사용하여도 원래 `this`에 구속된다.
