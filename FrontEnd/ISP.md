@@ -1,4 +1,4 @@
-### 객체 지향의 5대 원칙 (SOLID)
+### 객체 지향의 5대 원칙 (SOLID) 
 
 > 1. **단일 책임 원칙** (Single Responsibility Principle)
 > 2. **개방 폐쇄 원칙** (Open Closed Principle)
