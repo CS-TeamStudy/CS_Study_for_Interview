@@ -1,6 +1,6 @@
 ## Iterable (이터러블)
 
-### Iteration Protocol
+### Iteration Protocol 
 
 ES6에서 도입된 **이터레이션 프로토콜(iteration protocol)** 은 반복 가능한(iterable) 자료구조를 만들기 위해 ECMAScript 사양에 정의하여 미리 약속한 규칙입니다.
 
